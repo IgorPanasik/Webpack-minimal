@@ -1,0 +1,32 @@
+{
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		"incremental": true,
+		"strict": true,
+		"types": ["node"],
+		"forceConsistentCasingInFileNames": true,
+		"outDir": "./build/",
+		"noImplicitAny": true,
+		"module": "ES6",
+		"target": "ES6",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"plugins": [
+			{
+				"name": "typescript-plugin-css-modules"
+			}
+		]
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "NodeNext"
+		}
+	}
+}
