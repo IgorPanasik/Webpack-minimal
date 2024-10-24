@@ -16,7 +16,10 @@ export const buildPlugins = ({
 	const plugins: webpack.WebpackPluginInstance[] = [
 		new HtmlWebpackPlugin({
 			template: paths.html,
-			favicon: path.resolve(path.resolve(paths.public, 'icons/todo.ico')),
+			favicon: path.resolve(path.resolve(paths.public, 'favicon.ico')),
+		}),
+		new CopyPlugin({
+			patterns: [{ from: 'src/assets', to: 'assets' }],
 		}),
 	];
 
